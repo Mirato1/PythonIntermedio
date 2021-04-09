@@ -84,7 +84,7 @@ def run():
 
 
 
-    for worker in old_people:
+    for worker in adults:
         print (worker)
 
 
