@@ -1,3 +1,6 @@
+# Utiliza las palabras clave TRY, EXCEPT y RAISE para elevar un error si el
+# usuario ingresa un número negativo en nuestro programa de divisores 
+
 def divisors(num):
     divisors = []
 
@@ -8,12 +11,16 @@ def divisors(num):
     return divisors
 
 def run():
-    num = int(input("Ingrese un número: "))
-    print (divisors(num))
-    print("Terminó mi programa")
-
-
-
+    while True:
+        try:
+            num = int(input('Ingresa un número: '))
+            if num < 0 or num == 0:
+                raise ValueError
+            print(divisors(num))
+            print("Terminó mi programa")
+            break
+        except ValueError:
+            print("Debes ingresar un entero positivo")
 
 
 if __name__ == "__main__":

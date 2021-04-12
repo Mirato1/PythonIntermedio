@@ -1,0 +1,4 @@
+puto   
+gato
+perro
+pato
